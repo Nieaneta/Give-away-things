@@ -1,15 +1,8 @@
-body {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-    background-color: #fff;
-    max-width: 1300px;
-    font-family: "Open Sans", sans-serif;
-}
 .login {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 20px;
 }
 .login-txt {
     cursor: pointer;
@@ -28,6 +21,7 @@ body {
     align-items: center;
     cursor: pointer;
     list-style: none;
+    height: 30px;
 }
 
 .nav-list-el {
@@ -37,7 +31,7 @@ body {
 
 .nav-list-el:hover {
     border: 1px solid black;
-    padding: 6px 25px;
+    padding: 5px 20px;
     align-items: center;
 }
 
@@ -96,6 +90,7 @@ body {
     width: 200px;
     margin: 20px;
     font-weight: 300;
+    cursor: pointer;
 }
 .collection {
     left: 85%;
@@ -105,7 +100,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    /* padding: 0 30px; */
 }
 .col {
     flex: 1;
@@ -145,7 +140,7 @@ body {
 }
 
 .four-steps {
-    width: 80%;
+    width: 100%;
     height: 40vh;
     min-height: 500px;
     margin: 100px auto;
@@ -162,6 +157,7 @@ body {
     width: 200px;
     height: 30px;
     margin: 20px auto;
+    border-style: none;
 }
 
 .steps-bg {
@@ -173,13 +169,15 @@ body {
 }
 
 .select-img {
-    /* background-image: url('./assets/images/select.jpg');
-    background-repeat: no-repeat;
-    background-size: contain; */
     display: block;
     width: 50px;
     height: 40px;
     margin: 0 auto;
+}
+
+.four-steps-icon {
+    width: 38px;
+    height: 40px;
 }
 
 .select-txt::before {
@@ -193,6 +191,11 @@ body {
 .select-title {
     font-weight: 500;
 }
+
+.select-title.glasses {
+    margin-block-start: 0;
+}
+
 .select-txt {
     font-size: 13px;
     width: 80%;
@@ -211,7 +214,6 @@ body {
     text-transform: uppercase;
 }
 .about-us {
-   
     background-color: #ebebeb;
     height: 30vh;
     min-height: 600px;
@@ -222,24 +224,215 @@ body {
 .about-us-img {
     align-items: center;
     justify-content: flex-end;
-    background-image: url(./assets/images/about.png);
+    background-image: url("./assets/images/about.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    min-height: 500px;
+    height: 100%;
     width: 50%;
-    margin: 30px 0; 
+    margin: 40px 0;
 }
 .about-us-title {
     text-align: center;
-    width: 60%;
-    padding-top: 100px;
+    width: 100%;
+    padding-top: 60px;
     font-size: 2rem;
     font-weight: 400;
 }
 
+.about-us-ornament {
+    width: 40%;
+}
 .about-us-text {
-    width: 60%;
+    width: 100%;
     padding: 10px;
-    line-height: 25px;
+    line-height: 30px;
     text-align: center;
+}
+.about-us-text-col {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about-us-signature {
+    height: 80px;
+    margin-left: 250px;
+}
+
+.who-help-title {
+    text-align: center;
+    font-weight: 400;
+    margin-top: 50px;
+}
+
+.ornament-who-help {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+}
+
+.foundation-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 0;
+}
+.foundation-list-el {
+    padding: 20px;
+}
+
+.foundation-list-el:hover {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 15px;
+    height: 100%;
+}
+
+.foundation-txt {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.foundation-name {
+    font-weight: 500;
+    text-align: left;
+    margin: 30px 0 0 0;
+    font-size: 18px;
+}
+
+.foundation-mission {
+    text-align: left;
+    font-style: italic;
+    font-size: 13px;
+    margin: 0;
+}
+.foundation-mission::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #777;
+    margin: 15px 0;
+}
+.foundation-things {
+    text-align: right;
+    font-size: 14px;
+}
+
+.foundation-things::after {
+    content: "";
+    display: block;
+    width: -1%;
+    height: 1px;
+    background-color: #777;
+    margin: 15px 0;
+}
+
+.end {
+    align-items: flex-end;
+}
+
+.foundation-width {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pagination {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.pagination a {
+    box-sizing: border-box;
+    height: 20px;
+    padding: 8px;
+    text-decoration: none;
+    color: #000;
+}
+
+.pagination a:hover {
+    border: 1px solid #777;
+    padding: 2px 5px;
+}
+
+.bg-form {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    width: 400px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+.form-ornament {
+    height: 20px;
+    margin: 20px auto;
+    display: block;
+    
+}
+.form-img {
+    position: relative;
+    background-image: url("./assets/images/form-bg.jpg");
+    background-size: cover;
+    height: 60vh;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-form-title{
+    text-align: left;
+    text-transform: uppercase;
+    left: 60%;
+    font-weight: normal;
+}
+.contact-form-name{
+    border-style: none;
+    background-color: #eeefef;
+    border-bottom: 1px solid #000;
+    margin-right: 40px;
+}
+
+.contact-form-email{
+    border-style: none;
+    background-color: #eeefef;
+    border-bottom: 1px solid #000;
+}
+.contact-form-message{
+    margin-top: 30px;
+    border-style: none;
+    background-color: #eeefef;
+    border-bottom: 1px solid #000;
+    width: 350px;
+    resize: none;
+}
+.contact-form-btn{
+    display: block;
+    border-style: none;
+    background-color: #eeefef;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    margin:20px auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-copy{
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 14px;
+}
+.footer-fb, .footer-insta{
+    margin-right: 20px;
+    height: 40px;
 }

@@ -6,17 +6,22 @@ import Header from "./components/Header/Header";
 import Info from "./components/Info/Info";
 import FourSteps from "./components/FourSteps/FourSteps";
 import About from "./components/About/About";
-
+import WhoHelp from "./components/WhoHelp/WhoHelp";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
 class App extends Component {
     render() {
         return (
-            <div>
+            <>
                 <Nav />
                 <Header />
                 <Info />
                 <FourSteps />
                 <About />
-            </div>
+                <WhoHelp/>
+                <Form/>
+                <Footer/>
+            </>
         );
     }
 }

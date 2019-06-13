@@ -1,5 +1,8 @@
 import React from "react";
 
+import Sign from "../../assets/images/signature.png";
+import Ornament from "../../assets/images/ornament.png";
+
 const About = () => {
     return (
         <>
@@ -9,18 +12,20 @@ const About = () => {
                         <h2 className="about-us-title">O nas</h2>
                         <img
                             className="about-us-ornament"
-                            src="./assets/images/ornament.png"
-                            alt=""
+                            src={Ornament}
+                            alt="ornament"
                         />
+                        <div className="about-us-text-col">
                         <p className="about-us-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Consequatur fugiat aliquid odit enim non
                             labore ipsa, quod minima quos eius. Lorem ipsum
                             dolor sit amet consectetur adipisicing elit.
                         </p>
+                        </div>
                         <img
                             className="about-us-signature"
-                            src="./assets/images/Signature.jpg" alt=""
+                            src={Sign} alt=""
                         />
                     </div>
 

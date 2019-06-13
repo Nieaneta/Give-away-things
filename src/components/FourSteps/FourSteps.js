@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 
-import Button from "../Button/Button";
-
+import Button from "../Button";
+import Icon1 from "../../assets/images/select.jpg";
+import Icon2 from "../../assets/images/pack.png";
+import Icon3 from "../../assets/images/whoHelps.png";
+import Icon4 from "../../assets/images/orderCourier.png";
 class FourSteps extends Component {
     render() {
         return (
@@ -28,17 +31,18 @@ class Select extends Component {
     render() {
         return (
             <>
+            <div className="row">
                 <div className="col">
                     <img
-                        src="../../assets/images/square.jpg"
-                        className="select-img"
-                        alt=""
+                        src={Icon1}
+                        className="four-steps-icon"
+                        alt="hands"
                     />
-                    {/* <div className="select-img"></div> */}
                     <h4 className="select-title">Wybierz rzeczy</h4>
                     <p className="select-txt">
                         ubrania, zabawki, sprzęt i inne
                     </p>
+                </div>
                 </div>
             </>
         );
@@ -49,14 +53,16 @@ class Pack extends Component {
     render() {
         return (
             <>
+              <div className="row">
                 <div className="col">
-                    {/* <img
-                        src="./assets/images/pack.png"
-                        className="select-img"
-                        alt=""
-                    /> */}
+                    <img
+                        src={Icon2}
+                        className="four-steps-icon"
+                        alt="arrow"
+                    />
                     <h4 className="select-title">Spakuj je</h4>
                     <p className="select-txt">skorzystaj z worków na śmieci</p>
+                </div>
                 </div>
             </>
         );
@@ -67,14 +73,16 @@ class WhoHelps extends Component {
     render() {
         return (
             <>
+             <div className="row">
                 <div className="col">
                     <img
-                        src="./assets/images/whoHelps.png"
-                        className="select-img"
-                        alt=""
+                        src={Icon3}
+                        className="four-steps-icon"
+                        alt="glasses"
                     />
-                    <h4 className="select-title">Zdecyduj komu chcesz pomóc</h4>
+                    <h4 className="select-title glasses">Zdecyduj komu chcesz pomóc</h4>
                     <p className="select-txt">wybierz zaufane miejsce</p>
+                </div>
                 </div>
             </>
         );
@@ -85,16 +93,18 @@ class OrderCourier extends Component {
     render() {
         return (
             <>
+             <div className="row">
                 <div className="col">
                     <img
-                        src="./assets/images/orderCourier.png"
-                        className="select-img"
-                        alt=""
+                        src={Icon4}
+                        className="four-steps-icon"
+                        alt="people"
                     />
                     <h4 className="select-title">Zamów kuriera</h4>
                     <p className="select-txt">
                         Kurier przyjedzie w dogodnym terminie
                     </p>
+                </div>
                 </div>
             </>
         );
