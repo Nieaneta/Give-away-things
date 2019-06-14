@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import "../../assets/styles/Info.css";
 class Info extends Component {
     render() {
         return (
@@ -19,7 +20,10 @@ class GiveBags extends Component {
     state = {
         numberBag: 0
     };
+    
+componentDidMount(){
 
+}
     render() {
         return (
             <>

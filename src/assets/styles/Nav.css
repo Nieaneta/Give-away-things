@@ -1,0 +1,46 @@
+.login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+.login-txt {
+    cursor: pointer;
+    font-size: 13px;
+    padding: 10px 20px;
+}
+.login-account {
+    cursor: pointer;
+    border: 2px solid yellow;
+    padding: 8px;
+    font-size: 13px;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    height: 30px;
+}
+
+.nav-list-el {
+    font-size: 14px;
+    padding: 0 20px;
+}
+.nav-list-el a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-list-el:hover {
+    /* border: 1px solid black;
+    padding: 5px 20px;
+    align-items: center; */
+}
+
+.active {
+    border: 1px solid black;
+    padding: 5px 20px;
+    align-items: center;
+}

@@ -3,10 +3,12 @@ import React from "react";
 import Sign from "../../assets/images/signature.png";
 import Ornament from "../../assets/images/ornament.png";
 
+import "../../assets/styles/About.css";
+
 const About = () => {
     return (
         <>
-            <div className="about-us">
+            <section className="about-us">
                 <div className="row">
                     <div className="col">
                         <h2 className="about-us-title">O nas</h2>
@@ -31,7 +33,7 @@ const About = () => {
 
                     <div className="about-us-img" />
                 </div>
-            </div>
+            </section>
         </>
     );
 };

@@ -1,0 +1,61 @@
+.bg-form {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    width: 400px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+.form-ornament {
+    height: 20px;
+    margin: 20px auto;
+    display: block;
+}
+.form-img {
+    position: relative;
+    background-image: url("../images/form-bg.jpg");
+    background-size: cover;
+    height: 60vh;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-form-title {
+    text-align: left;
+    text-transform: uppercase;
+    left: 60%;
+    font-weight: normal;
+}
+.contact-form-name {
+    border-style: none;
+    background-color: #eeefef;
+    border-bottom: 1px solid #000;
+    margin-right: 40px;
+}
+
+.contact-form-email {
+    border-style: none;
+    background-color: #eeefef;
+    border-bottom: 1px solid #000;
+}
+.contact-form-message {
+    margin-top: 30px;
+    border-style: none;
+    background-color: #eeefef;
+    border-bottom: 1px solid #000;
+    width: 350px;
+    resize: none;
+}
+.contact-form-btn {
+    display: block;
+    border-style: none;
+    background-color: #eeefef;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    margin: 20px auto;
+}

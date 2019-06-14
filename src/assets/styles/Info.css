@@ -1,0 +1,29 @@
+.info-bg {
+    position: absolute;
+    background-image: url("../images/Bg.jpg");
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.give-bag-number,
+.organization-number,
+.collection-number {
+    font-size: 4rem;
+    padding-top: 40px;
+}
+
+.give-bag-title,
+.organization-title,
+.collection-title {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.give-bag-txt,
+.organization-txt,
+.collection-txt {
+    font-size: 13px;
+}

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 
 import Ornament from "../../assets/images/ornament.png";
+
+import "../../assets/styles/WhoHelp.css";
 
 const WhoHelp = () => {
     return (
@@ -113,11 +116,13 @@ const WithoutHome = () => {
 class Pagination extends Component {
     render() {
         return (
+            <Router>
             <div className="pagination">
-                <a href="/">1</a>
-                <a href="/">2</a>
-                <a href="/">3</a>
+                <Link to="/foundation">1</Link>
+                <Link to="/organization">2</Link>
+                <Link to="/collection">3</Link>
             </div>
+            </Router>
         );
     }
 }

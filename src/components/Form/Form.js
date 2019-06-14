@@ -2,11 +2,12 @@ import React, { Component } from "react";
 
 import Ornament from "../../assets/images/ornament.png";
 
+import "../../assets/styles/Form.css";
 class Form extends Component {
     render() {
         return (
             <>
-                <div className="form-img">
+                <form className="form-img">
                     <div className="bg-form">
                         <h3 className="form-title">Skontaktuj się z nami</h3>
                         <img src={Ornament} className="form-ornament" alt="" />
@@ -44,7 +45,7 @@ class Form extends Component {
               
                         <button className="contact-form-btn">Wyślij</button>
                         </div>
-                </div>
+                </form>
               
             </>
         );

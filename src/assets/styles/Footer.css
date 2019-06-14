@@ -1,0 +1,16 @@
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-copy {
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 14px;
+}
+.footer-fb,
+.footer-insta {
+    margin-right: 20px;
+    height: 40px;
+}

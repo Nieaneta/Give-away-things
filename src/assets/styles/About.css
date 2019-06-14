@@ -1,0 +1,45 @@
+.about-us {
+    background-color: #ebebeb;
+    height: 30vh;
+    min-height: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-us-img {
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("../images/about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    height: 100%;
+    width: 50%;
+    margin: 40px 0;
+}
+.about-us-title {
+    text-align: center;
+    width: 100%;
+    padding-top: 60px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.about-us-ornament {
+    width: 40%;
+}
+.about-us-text {
+    width: 100%;
+    padding: 10px;
+    line-height: 30px;
+    text-align: center;
+}
+.about-us-text-col {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.about-us-signature {
+    height: 80px;
+    margin-left: 250px;
+}
