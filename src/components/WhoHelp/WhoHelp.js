@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {BrowserRouter as Router, NavLink} from 'react-router-dom';
 
 import Ornament from "../../assets/images/ornament.png";
 
@@ -22,17 +22,13 @@ const WhoHelp = () => {
 
 const Foundation = () => {
     return (
+        <Router>
         <ul className="foundation-list">
-            <li className="foundation-list-el">Fundacjom</li>
-            <li className="foundation-list-el">
-                Organizacjom
-                <br /> pozarządowym
-            </li>
-            <li className="foundation-list-el">
-                Lokalnym <br />
-                zbiórkom
-            </li>
+            <li className="foundation-list-el"><NavLink to="/foundation">Fundacjom</NavLink></li>
+            <li className="foundation-list-el"><NavLink to="/organizaton"> Organizacjom pozarządowym</NavLink></li>
+            <li className="foundation-list-el"><NavLink to="/collection">Lokalnym zbiórkom</NavLink></li>
         </ul>
+        </Router>
     );
 };
 
@@ -118,9 +114,9 @@ class Pagination extends Component {
         return (
             <Router>
             <div className="pagination">
-                <Link to="/foundation">1</Link>
-                <Link to="/organization">2</Link>
-                <Link to="/collection">3</Link>
+                <NavLink to="/foundation">1</NavLink>
+                <NavLink to="/organization">2</NavLink>
+                <NavLink to="/collection">3</NavLink>
             </div>
             </Router>
         );

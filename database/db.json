@@ -1,0 +1,6 @@
+{
+    "users": [
+        { "name": "Aneta", "email": "nieaneta@int.pl", "password": "nieaneta" },
+        {"name": "Aneta", "email": "nieaneta@int.pl", "password": "nieaneta" }
+    ]
+}

@@ -1,7 +1,15 @@
-import React from "react";
-
+import React, {Component} from "react";
+import {Route} from 'react-router-dom';
 import "../../assets/styles/Header.css";
-const Header = () => {
+import Form1Page from '../Form1/HeaderForm1';
+
+const isClicked = false;
+class Header extends Component{
+    state={
+        isClicked: false
+    }
+
+    render(){
     return (
         <>
             <header className="header">
@@ -10,11 +18,14 @@ const Header = () => {
                     Oddaj niechciane rzeczy w zaufane ręce
                 </p>
                 <div className="header-img" />
-                <button className="give">Oddaj rzeczy</button>
-                <button className="collection">Zorganizuj zbiórkę</button>
+                <Route path="/">
+                <button onClick={this.handleButtonClick ? isClicked : <Form1Page/>} className="give">Oddaj rzeczy</button>
+                <button onClick={this.handleButtonClick} className="collection">Zorganizuj zbiórkę</button>
+                </Route>
             </header>
         </>
     );
-};
+}
+}
 
 export default Header;

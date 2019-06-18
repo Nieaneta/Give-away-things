@@ -22,11 +22,15 @@
     padding: 20px;
 }
 
-.foundation-list-el:hover {
+.active {
     border: 1px solid #000;
     box-sizing: border-box;
     padding: 15px;
     height: 100%;
+}
+.foundation-list-el a{
+    text-decoration: none;
+    color: #000;
 }
 
 .foundation-txt {
@@ -93,7 +97,7 @@
     color: #000;
 }
 
-.pagination a:hover {
+.active {
     border: 1px solid #777;
     padding: 2px 5px;
 }

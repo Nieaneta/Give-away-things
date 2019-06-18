@@ -3,6 +3,7 @@ import "../assets/styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Nav from "../components/Nav/Nav";
+// import Logged from "../components/Logged/Logged";
 import Header from "../components/Header/Header";
 import Info from "../components/Info/Info";
 import FourSteps from "../components/FourSteps/FourSteps";
@@ -18,6 +19,7 @@ class App extends Component {
                     <div className="app">
                         <nav className="navigation">
                             {<Nav />}
+                            {/* {<Logged/>} */}
 
                             <Switch>
                                 <Route path="/" exact Component={Header} />
