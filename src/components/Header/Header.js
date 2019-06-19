@@ -9,6 +9,10 @@ class Header extends Component{
         isClicked: false
     }
 
+    handleButtonClick = (event) => {
+        console.log(event)
+    }
+
     render(){
     return (
         <>
@@ -18,10 +22,6 @@ class Header extends Component{
                     Oddaj niechciane rzeczy w zaufane ręce
                 </p>
                 <div className="header-img" />
-                <Route path="/">
-                <button onClick={this.handleButtonClick ? isClicked : <Form1Page/>} className="give">Oddaj rzeczy</button>
-                <button onClick={this.handleButtonClick} className="collection">Zorganizuj zbiórkę</button>
-                </Route>
             </header>
         </>
     );
