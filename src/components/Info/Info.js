@@ -3,9 +3,10 @@ import React, { Component } from "react";
 import "../../assets/styles/Info.css";
 class Info extends Component {
     render() {
+        
         return (
             <>
-                <div className="row">
+                <div className="row" id="info">
                     <div className="info-bg" />
                     <GiveBags />
                     <SupportOrganization />

@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Nav from '../../components/Nav/Nav';
+import {Link} from 'react-router-dom';
+import Ornament from '../../components/Ornament';
 
 class Logged extends Component{
     state={
@@ -6,7 +9,7 @@ class Logged extends Component{
         password: "",
         repeatPassword: "",
         isLogged: false,
-        user: null
+        users: null
     }
     
     onInputChange = (e) =>{
@@ -19,30 +22,30 @@ class Logged extends Component{
         e.preventDefault();
         const {login, password} = this.state;
         const {logged} = this.props
-    
-    fetch(users)
-            .then(data => data.json())
-            .then(users => {
-                
-                users.forEach(user => {
-                    const isLoginValid = user.login === login;
-                    const isPasswordValid = user.password === password;
-
-                    if(isLoginValid && isPasswordValid){
-                        logged(user);
-                        this.setState({isLogged: true, user})
-                    } else{
-                        this.setState({errorMessage: "Zly login lub haslo"})
-                    }
-                })
-            })
-            .catch(err => alert(err))
     }
+    // fetch(users)
+    //         .then(data => data.json())
+    //         .then(users => {
+                
+    //             users.forEach(user => {
+    //                 const isLoginValid = user.login === login;
+    //                 const isPasswordValid = user.password === password;
+
+    //                 if(isLoginValid && isPasswordValid){
+    //                     logged(user);
+    //                     this.setState({isLogged: true, user})
+    //                 } else{
+    //                     this.setState({errorMessage: "Zly login lub haslo"})
+    //                 }
+    //             })
+    //         })
+    //         .catch(err => alert(err))
+    // }
 
 
-    render(){
+    render() {
         const {email, password, repeatPassword, isLogged,user} = this.state;
-        if(!isLogged){
+        // if(!isLogged){
         return(
             <>
             <Nav/>
@@ -77,14 +80,14 @@ class Logged extends Component{
         )
       
 
-        }  else if(isLogged){
-            return(
-                <>
-                <Nav/>
-                <h4 className="welcome">Witaj, {user.login}</h4>
-                </>
-            )
-    }
+    //     }  else if(isLogged){
+    //         return(
+    //             <>
+    //             <Nav/>
+    //             <h4 className="welcome">Witaj, {user.login}</h4>
+    //             </>
+    //         )
+    // }
 }}
 
 export default Logged

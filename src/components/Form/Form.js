@@ -3,6 +3,7 @@ import { Prompt } from "react-router-dom";
 
 import Ornament from "../../assets/images/ornament.png";
 import "../../assets/styles/Form.css";
+
 class Form extends Component {
     state = {
         name: "",
@@ -110,8 +111,7 @@ class Form extends Component {
                         >
                             Wyślij
                         </button>
-                    </div>
-                    <div>
+                        <div>
                         <div>
                             {!isNameValid &&
                                 "Pole imię musi zawierać co najmniej 2 znaki"}
@@ -124,6 +124,8 @@ class Form extends Component {
                             {!isMessageValid &&
                                 "Pole wiadomość musi zostać uzupełnione"}
                         </div>
+                    </div>
+                 
                     </div>
                     <Prompt
                         when={this.state.message}

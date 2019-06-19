@@ -11,7 +11,7 @@ class FourSteps extends Component {
     render() {
         return (
             <>
-                <section className="four-steps">
+                <section className="four-steps" id="four-steps">
                     <h3 className="steps-title">Wystarczą 4 proste kroki</h3>
                     <div className="ornament" />
                     <div className="steps-bg">

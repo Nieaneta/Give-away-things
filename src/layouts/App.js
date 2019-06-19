@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import "../assets/styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import {
+    Link,
+    Element,
+    Events,
+    animateScroll as scroll,
+    scrollSpy,
+    scroller
+} from "react-scroll";
+
 import Nav from "../components/Nav/Nav";
-// import Logged from "../components/Logged/Logged";
+import Logged from "../components/Logged/Logged";
 import Header from "../components/Header/Header";
 import Info from "../components/Info/Info";
 import FourSteps from "../components/FourSteps/FourSteps";
@@ -18,18 +27,18 @@ class App extends Component {
                 <>
                     <div className="app">
                         <nav className="navigation">
-                            {<Nav />}
-                            {/* {<Logged/>} */}
+                            <Nav />
 
                             <Switch>
-                                <Route path="/" exact Component={Header} />
-                                <Route path="/info" Component={Info} />
-                                <Route path="/about" Component={About} />
+                                <Route path="/" exact component={Header} />
+                                <Route path="/info" component={Info} />
+                                <Route path="/about" component={About} />
                                 <Route
                                     path="/foundation"
-                                    Component={FourSteps}
+                                    component={FourSteps}
                                 />
-                                <Route path="/contact" Component={Form} />
+                                <Route path="/contact" component={Form} />
+                                <Route path="/login" component={Logged} />
                             </Switch>
                         </nav>
                         <header className="page-header">{<Header />}</header>
