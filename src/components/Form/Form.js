@@ -64,7 +64,7 @@ class Form extends Component {
         return (
             <>
                 {isFormValid && "Dziękujemy za wiadomość! :)"}
-                <form onSubmit={this.onFormSubmit} className="form-img">
+                <form onSubmit={this.onFormSubmit} className="form-img" id="contact">
                     <div className="bg-form">
                         <h3 className="form-title">Skontaktuj się z nami</h3>
                         <img src={Ornament} className="form-ornament" alt="" />

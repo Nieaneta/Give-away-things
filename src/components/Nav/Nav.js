@@ -9,9 +9,9 @@ import {
 const list = [
     { name: "Start", path: "/", exact: true },
     { name: "O co chodzi?", to: "info" },
-    { name: "O nas", to: "/about" },
-    { name: "Fundacje i organizacje", to: "/foundation" },
-    { name: "Kontakt", to: "/contact" }
+    { name: "O nas", to: "about" },
+    { name: "Fundacje i organizacje", to: "foundation" },
+    { name: "Kontakt", to: "contact" }
 ];
 
 const options = {

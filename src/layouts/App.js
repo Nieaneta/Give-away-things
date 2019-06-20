@@ -20,6 +20,7 @@ import About from "../components/About/About";
 import WhoHelp from "../components/WhoHelp/WhoHelp";
 import Form from "../components/Form/Form";
 import Footer from "../components/Footer/Footer";
+
 class App extends Component {
     render() {
         return (
@@ -41,7 +42,7 @@ class App extends Component {
                                 <Route path="/login" component={Logged} />
                             </Switch>
                         </nav>
-                        <header className="page-header">{<Header />}</header>
+                        {/* <header className="page-header">{<Header />}</header> */}
                         <section className="page-information">
                             {<Info />}
                         </section>

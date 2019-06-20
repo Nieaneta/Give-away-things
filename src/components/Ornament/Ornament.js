@@ -1,5 +1,5 @@
 import React from "react";
-
+import OrnamStyle from '../../assets/styles/Ornament.css';
 
 const Ornament = () => {
     return(

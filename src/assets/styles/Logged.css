@@ -1,0 +1,17 @@
+.formLog{
+    text-align: center;
+    margin: 50px auto;
+    height: 500px;
+    
+}
+
+.emailLog{
+    display: block;
+    margin: 0 auto;
+}
+
+.passwordLog{
+    display: block;
+    margin: 0 auto;
+}
+
