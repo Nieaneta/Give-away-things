@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-
+import { NavLink } from "react-router-dom";
 import "../../assets/styles/Nav.css";
 import { Link } from "react-scroll";
+import {
+    withRouter
+} from 'react-router-dom'
 
 const list = [
     { name: "Start", path: "/", exact: true },
-    { name: "O co chodzi?", path: "info" },
-    { name: "O nas", path: "/about" },
-    { name: "Fundacje i organizacje", path: "/foundation" },
-    { name: "Kontakt", path: "/contact" }
+    { name: "O co chodzi?", to: "info" },
+    { name: "O nas", to: "/about" },
+    { name: "Fundacje i organizacje", to: "/foundation" },
+    { name: "Kontakt", to: "/contact" }
 ];
 
 const options = {
@@ -18,26 +21,37 @@ const options = {
     duration: 500
 };
 
+const logoutUser = Promise.resolve(); // TODO: obsługa wylogowania
+
 class Nav extends Component {
+    loggOut = () => {
+        logoutUser().then(() =>
+            this.props.history.push('/')
+        );
+    };
+
     render() {
         const { loggUser, loggOut } = this.props;
-        const menu = list.map(item => (
-            <li className="nav-list-el" key={item.name}>
-                <Link
-                    activeClass="active"
-                    {...options}
-                    to={item.path}
-                    exact={item.exact ? item.exact : false}
-                >
-                    {item.name}
-                </Link>
-            </li>
-        ));
+        const menu = list.map(item => {
+            const Component = item.path ? NavLink : Link;
+            return (
+                <li className="nav-list-el" key={item.name}>
+                    <Component
+                        activeClass="active"
+                        {...options}
+                        to={item.path || item.to}
+                        exact={item.exact ? item.exact : false}
+                    >
+                        {item.name}
+                    </Component>
+                </li>
+            )
+        });
         return (
             <>
                 <div className="login">
                     <p className="login-txt">
-                        <Link to="/">Zaloguj</Link>
+                        <NavLink to="/login">Zaloguj</NavLink>
                     </p>
                     <div className="navLog">
                         {loggUser && <button onClick={loggOut} />}
@@ -54,4 +68,4 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
+export default withRouter(Nav);
