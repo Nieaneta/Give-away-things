@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Route} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import "../../assets/styles/Header.css";
 import Form1Page from '../Form1/HeaderForm1';
 
@@ -21,6 +21,7 @@ class Header extends Component{
                 <p className="header-give">
                     Oddaj niechciane rzeczy w zaufane ręce
                 </p>
+                <NavLink to='/oddaj'>Oddaj </NavLink>
                 <div className="header-img" />
             </header>
         </>
