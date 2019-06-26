@@ -72,4 +72,9 @@
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
 }

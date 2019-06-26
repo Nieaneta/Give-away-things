@@ -1,6 +1,15 @@
 {
     "users": [
         { "name": "Aneta", "email": "nieaneta@int.pl", "password": "nieaneta" },
-        {"name": "Aneta", "email": "nieaneta@int.pl", "password": "nieaneta" }
+
+        { "name": "Sylwia", "email": "sylwus@int.pl", "password": "sylwus85" },
+
+        { "name": "Marcin", "email": "marcin@o2.pl", "password": "marcinek" },
+
+        { "name": "Cezary", "email": "sizar@wp.pl", "password": "Czari11" },
+
+        { "name": "Bartosz", "email": "chasm@onet.pl", "password": "barti82" },
+
+        { "name": "Basia", "email": "basia@o2.pl", "password": "barabara" }
     ]
 }

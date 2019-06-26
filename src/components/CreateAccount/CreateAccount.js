@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Nav from "../../components/Nav/Nav";
 import { Link, NavLink } from "react-router-dom";
 import Ornament from "../../assets/images/ornament.png";
-import Logg from "../../assets/styles/Logged.css";
-import Api from "../../components/API/Api";
-class Logged extends Component {
+import CreateAcc from "../../assets/styles/Account.css";
+
+class Account extends Component {
     state = {
         email: "",
         password: "",
@@ -23,29 +23,7 @@ class Logged extends Component {
         e.preventDefault();
         const { email, password } = this.state;
         const { logged } = this.props;
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
     };
-
-    // componentDidMount(){
-    // fetch(Api)
-    //         .then(resp => resp.json())
-    //         .then(users => {
-
-    //             users.map(user => {
-    //                 const isLoginValid = user.email === email;
-    //                 const isPasswordValid = user.password === password;
-
-    //                 if(isLoginValid && isPasswordValid){
-    //                     logged(user);
-    //                     this.setState({isLogged: true, user})
-    //                 } else{
-    //                     this.setState({errorMessage: "Zly login lub haslo"})
-    //                 }
-    //             })
-    // })
-    // }
-
 
     render() {
         const { email, password, repeatPassword, isLogged, user } = this.state;
@@ -53,14 +31,13 @@ class Logged extends Component {
             return (
                 <>
                     <div className="formLog">
-                        <h2 className="formLogTitle">Zaloguj się</h2>
+                        <h2 className="formLogTitle">Załóż konto</h2>
                         <img src={Ornament} alt="" className="imgOrnam" />
                         {/* <Ornament /> */}
                         <form
                             className="formSignIn"
                             onSubmit={this.onFormSubmit}
                         >
-                           
                             <input
                                 type="email"
                                 id="email"
@@ -71,7 +48,6 @@ class Logged extends Component {
                                 onChange={this.onInputChange}
                             />
 
-                            
                             <input
                                 type="password"
                                 id="password"
@@ -81,13 +57,21 @@ class Logged extends Component {
                                 onChange={this.onInputChange}
                             />
 
-                            <p className="remindPass">Przypomnij hasło</p>
+                            <input
+                                type="password"
+                                id="password"
+                                className="passwordLog"
+                                name="password"
+                                placeholder="Powtórz hasło"
+                                onChange={this.onInputChange}
+                            />
+
                             <div className="buttonLogg">
-                                <button className="createAccountLog" type="submit">
-                                    <NavLink to="/create-account">Załóż konto</NavLink>
+                                <button className="signIn" type="submit">
+                                    <NavLink to="/login">Zaloguj się</NavLink>
                                 </button>
-                                <button className="signInLog" type="submit">
-                                    Zaloguj się
+                                <button className="createAccount" type="submit">
+                                    Załóż konto
                                 </button>
                             </div>
                         </form>
@@ -106,4 +90,4 @@ class Logged extends Component {
         }
     }
 }
-export default Logged;
+export default Account;

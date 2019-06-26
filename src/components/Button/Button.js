@@ -1,8 +1,9 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 const Button = () => {
     return(
-        <button className="create-account">Załóż konto</button>
+        <NavLink to="/create-account"><button className="create-account">Załóż konto</button></NavLink>
     )
 }
 

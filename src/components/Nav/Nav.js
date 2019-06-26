@@ -57,7 +57,7 @@ class Nav extends Component {
                         {loggUser && <button onClick={loggOut} />}
                     </div>
                     <p className="login-account">
-                        <Link to="/">Załóż konto</Link>
+                        <NavLink to="/create-account">Załóż konto</NavLink>
                     </p>
                 </div>
                 <nav className="nav" id="navbar">

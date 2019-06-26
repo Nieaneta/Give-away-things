@@ -1,0 +1,43 @@
+.formLog {
+    text-align: center;
+    margin: 80px auto;
+    height: 500px;
+    width: 400px;
+}
+.formSignIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.formLogTitle {
+    font-size: 2rem;
+}
+.imgOrnam {
+    height: 40px;
+}
+
+.emailLog,
+.passwordLog {
+    margin: 15px;
+}
+
+.buttonLogg {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signIn,
+.createAccount {
+    border-style: none;
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+    margin-top: 35px;
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.signIn{
+    font-size: 0.9rem;
+}

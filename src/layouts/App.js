@@ -13,13 +13,15 @@ import {
 
 import Nav from "../components/Nav/Nav";
 import Logged from "../components/Logged/Logged";
+import CreateAccount from "../components/CreateAccount/CreateAccount";
 import Header from "../components/Header/Header";
 import Info from "../components/Info/Info";
 import FourSteps from "../components/FourSteps/FourSteps";
 import About from "../components/About/About";
 import WhoHelp from "../components/WhoHelp/WhoHelp";
 import Form from "../components/Form/Form";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
+import FirstForm from "../components/FirstForm/FirstForm";
 
 class App extends Component {
     render() {
@@ -40,6 +42,11 @@ class App extends Component {
                                 />
                                 <Route path="/contact" component={Form} />
                                 <Route path="/login" component={Logged} />
+                                <Route
+                                    path="/create-account"
+                                    component={CreateAccount}
+                                />
+                                <Route path="/first-form" component ={FirstForm}/>
                             </Switch>
                         </nav>
                         {/* <header className="page-header">{<Header />}</header> */}
@@ -55,8 +62,13 @@ class App extends Component {
                             {<WhoHelp />}
                         </section>
                         <section className="page-form">{<Form />}</section>
-                        <footer className="page-footer">{<Footer />}</footer>
+                        <section className="page-form-first">
+                            {/* {<FirstForm />} */}
+                        </section>
+                        {/* <footer className="page-footer">{<Footer />}</footer> */}
+                      
                     </div>
+                    
                 </>
             </Router>
         );
