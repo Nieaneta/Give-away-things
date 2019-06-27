@@ -1,19 +1,32 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "users": [
+        { "name": "Aneta", "email": "nieaneta@int.pl", "password": "nieaneta" },
+
+        { "name": "Sylwia", "email": "sylwus@int.pl", "password": "sylwus85" },
+
+        { "name": "Marcin", "email": "marcin@o2.pl", "password": "marcinek" },
+
+        { "name": "Cezary", "email": "sizar@wp.pl", "password": "Czari11" },
+
+        { "name": "Bartosz", "email": "chasm@onet.pl", "password": "barti82" },
+
+        { "name": "Basia", "email": "basia@o2.pl", "password": "barabara" }
+    ]
 }

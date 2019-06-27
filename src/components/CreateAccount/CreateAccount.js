@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../../components/Nav/Nav";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Ornament from "../../assets/images/ornament.png";
 import CreateAcc from "../../assets/styles/Account.css";
 

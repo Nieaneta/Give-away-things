@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Prompt } from "react-router-dom";
 
-import Footer from "../Footer/Footer";
+import Footer from "../Footer";
 import Ornament from "../../assets/images/ornament.png";
-import "../../assets/styles/Form.css";
+import "../../assets/styles/ContactForm.css";
 
 class Form extends Component {
     state = {

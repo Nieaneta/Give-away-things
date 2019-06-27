@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Nav from "../../components/Nav/Nav";
+import Nav from "../Nav";
 import { Link, NavLink } from "react-router-dom";
 import Ornament from "../../assets/images/ornament.png";
 import Logg from "../../assets/styles/Logged.css";
 import Api from "../../components/API/Api";
+import FormGive from "../FormGive";
+
 class Logged extends Component {
     state = {
         email: "",
@@ -23,8 +25,8 @@ class Logged extends Component {
         e.preventDefault();
         const { email, password } = this.state;
         const { logged } = this.props;
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
     };
 
     // componentDidMount(){
@@ -46,7 +48,6 @@ class Logged extends Component {
     // })
     // }
 
-
     render() {
         const { email, password, repeatPassword, isLogged, user } = this.state;
         if (!isLogged) {
@@ -55,12 +56,11 @@ class Logged extends Component {
                     <div className="formLog">
                         <h2 className="formLogTitle">Zaloguj się</h2>
                         <img src={Ornament} alt="" className="imgOrnam" />
-                        {/* <Ornament /> */}
+                  
                         <form
                             className="formSignIn"
                             onSubmit={this.onFormSubmit}
                         >
-                           
                             <input
                                 type="email"
                                 id="email"
@@ -71,7 +71,6 @@ class Logged extends Component {
                                 onChange={this.onInputChange}
                             />
 
-                            
                             <input
                                 type="password"
                                 id="password"
@@ -83,11 +82,19 @@ class Logged extends Component {
 
                             <p className="remindPass">Przypomnij hasło</p>
                             <div className="buttonLogg">
-                                <button className="createAccountLog" type="submit">
-                                    <NavLink to="/create-account">Załóż konto</NavLink>
+                                <button
+                                    className="createAccountLog"
+                                    type="submit"
+                                >
+                                    <NavLink to="/create-account">
+                                        Załóż konto
+                                    </NavLink>
                                 </button>
+
                                 <button className="signInLog" type="submit">
-                                    Zaloguj się
+                                    <NavLink to="/form-give">
+                                        Zaloguj się
+                                    </NavLink>
                                 </button>
                             </div>
                         </form>
@@ -95,14 +102,15 @@ class Logged extends Component {
                 </>
             );
 
-            if (isLogged) {
-                return (
-                    <>
-                        <Nav />
-                        <h4 className="welcome">Witaj, {user.login}</h4>
-                    </>
-                );
-            }
+            // if (isLogged) {
+            //     return (
+            //         <>
+            //             <Nav />
+            //             <h4 className="welcome">Witaj, {user.login}</h4>
+            //             <FormGive/>
+            //         </>
+            //     );
+            // }
         }
     }
 }

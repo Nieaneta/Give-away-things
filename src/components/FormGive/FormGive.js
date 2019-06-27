@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Ornament from "../../assets/images/ornament.png";
-import Form from "../Form/Form.js";
-import "../../assets/styles/FirstForm.css";
+import ContactForm from "../ContactForm";
+import "../../assets/styles/FormGive.css";
+import Api from "../../components/API/Api";
+import Logged from "../Logged";
 
-
-class FirstForm extends Component {
+class FormGive extends Component {
     render() {
         return (
-            <div className="header-formFirst">
+            <div className="header-form-give">
                 <h3>Oddaj rzeczy, których już nie chcesz</h3>
                 <h2>Potrzebującym</h2>
                 <Ornament />
@@ -63,14 +64,14 @@ class MainForm extends Component {
 
                     <input type="checkbox" />
                     <label>inne</label>
-                    <Link to="/goForm2">
+                    <NavLink to="/goForm2">
                         <button>Dalej</button>
-                    </Link>
+                    </NavLink>
                 </form>
-                <Form />
+                <ContactForm />
             </>
         );
     }
 }
 
-export default FirstForm;
+export default FormGive;
