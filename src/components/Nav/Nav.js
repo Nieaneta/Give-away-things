@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "../../assets/styles/Nav.css";
 import { Link } from "react-scroll";
-import {
-    withRouter
-} from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
 const list = [
     { name: "Start", path: "/", exact: true },
@@ -15,6 +13,7 @@ const list = [
 ];
 
 const options = {
+    activeClass: "active",
     spy: true,
     smooth: true,
     offset: -10,
@@ -25,9 +24,7 @@ const logoutUser = Promise.resolve(); // TODO: obsługa wylogowania
 
 class Nav extends Component {
     loggOut = () => {
-        logoutUser().then(() =>
-            this.props.history.push('/')
-        );
+        logoutUser().then(() => this.props.history.push("/"));
     };
 
     render() {
@@ -37,7 +34,6 @@ class Nav extends Component {
             return (
                 <li className="nav-list-el" key={item.name}>
                     <Component
-                        activeClass="active"
                         {...options}
                         to={item.path || item.to}
                         exact={item.exact ? item.exact : false}
@@ -45,7 +41,7 @@ class Nav extends Component {
                         {item.name}
                     </Component>
                 </li>
-            )
+            );
         });
         return (
             <>

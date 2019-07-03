@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route, NavLink } from "react-router-dom";
 import "../../assets/styles/Header.css";
-import "../Nav/Nav";
-// import Form1Page from '../Form1/HeaderForm1';
+import "../Nav";
+
 
 const isClicked = false;
 class Header extends Component {

@@ -3,16 +3,18 @@ import Nav from "../Nav";
 import { Link, NavLink } from "react-router-dom";
 import Ornament from "../../assets/images/ornament.png";
 import Logg from "../../assets/styles/Logged.css";
-import Api from "../../components/API/Api";
+import API from "../../components/API/Api";
 import FormGive from "../FormGive";
 
+const isClicked = false;
 class Logged extends Component {
     state = {
         email: "",
         password: "",
         repeatPassword: "",
         isLogged: false,
-        users: null
+        users: [],
+        isClicked: false
     };
 
     onInputChange = e => {
@@ -29,34 +31,45 @@ class Logged extends Component {
         localStorage.setItem("password", password);
     };
 
-    // componentDidMount(){
-    // fetch(Api)
-    //         .then(resp => resp.json())
-    //         .then(users => {
+    componentDidMount() {
+        // let API = "http://localhost:3000/users";
+        fetch(API)
+            .then(resp => resp.json())
+            .then(users => {
+                users.map(
+                    users((user, id) => {
+                        return (
+                            <div key={id}>
+                                <h3>{user.name}</h3>
+                                <p>{user.email}</p>
+                                <p>{user.password}</p>
+                            </div>
+                        );
+                        // const isLoginValid = user.email === email;
+                        // const isPasswordValid = user.password === password;
 
-    //             users.map(user => {
-    //                 const isLoginValid = user.email === email;
-    //                 const isPasswordValid = user.password === password;
-
-    //                 if(isLoginValid && isPasswordValid){
-    //                     logged(user);
-    //                     this.setState({isLogged: true, user})
-    //                 } else{
-    //                     this.setState({errorMessage: "Zly login lub haslo"})
-    //                 }
-    //             })
-    // })
-    // }
-
+                        // if (isLoginValid && isPasswordValid) {
+                        //     logged(user);
+                        //     this.setState({ isLogged: true, user });
+                        // } else {
+                        //     this.setState({
+                        //         errorMessage: "Zly login lub haslo"
+                        //     });
+                        // }
+                    })
+                );
+            });
+    }
     render() {
-        const { email, password, repeatPassword, isLogged, user } = this.state;
+        const { email, password, repeatPassword, isLogged, users } = this.state;
         if (!isLogged) {
             return (
                 <>
                     <div className="formLog">
+                        {this.state.users}
                         <h2 className="formLogTitle">Zaloguj się</h2>
                         <img src={Ornament} alt="" className="imgOrnam" />
-                  
+
                         <form
                             className="formSignIn"
                             onSubmit={this.onFormSubmit}

@@ -17,16 +17,46 @@
         "name": "typicode"
     },
     "users": [
-        { "name": "Aneta", "email": "nieaneta@int.pl", "password": "nieaneta" },
+        {
+            "id": 1,
+            "name": "Aneta",
+            "email": "nieaneta@o2.pl",
+            "password": "nieaneta"
+        },
 
-        { "name": "Sylwia", "email": "sylwus@int.pl", "password": "sylwus85" },
+        {
+            "id": 2,
+            "name": "Sylwia",
+            "email": "sylwus@int.pl",
+            "password": "sylwus85"
+        },
 
-        { "name": "Marcin", "email": "marcin@o2.pl", "password": "marcinek" },
+        {
+            "id": 3,
+            "name": "Marcin",
+            "email": "marcin@o2.pl",
+            "password": "marcinek"
+        },
 
-        { "name": "Cezary", "email": "sizar@wp.pl", "password": "Czari11" },
+        {
+            "id": 4,
+            "name": "Cezary",
+            "email": "sizar@wp.pl",
+            "password": "Czari11"
+        },
 
-        { "name": "Bartosz", "email": "chasm@onet.pl", "password": "barti82" },
+        {
+            "id": 5,
+            "name": "Bartosz",
+            "email": "chasm@onet.pl",
+            "password": "barti82"
+        },
 
-        { "name": "Basia", "email": "basia@o2.pl", "password": "barabara" }
+        {
+            "id": 6,
+            "name": "Basia",
+            "email": "basia@o2.pl",
+            "password": "barabara"
+        }
     ]
 }
