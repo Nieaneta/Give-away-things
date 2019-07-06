@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-// import Header from "../Form1/HeaderForm1";
-import Form from "../Form1";
 import Footer from "../Footer/Footer";
 import ContactForm from "../ContactForm";
 

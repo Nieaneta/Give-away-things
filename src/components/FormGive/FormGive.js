@@ -54,7 +54,6 @@ class FormGive extends Component {
                 }
               })()}
         
-                {/* <MainForm /> */}
             </div>
         );
     }
