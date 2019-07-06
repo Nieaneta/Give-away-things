@@ -8,7 +8,7 @@ import "../../assets/styles/WhoHelp.css";
 const WhoHelp = () => {
     return (
         <>
-            <h2 className="who-help-title">Komu pomagamy?</h2>
+            <h2 className="who-help-title" id="foundation">Komu pomagamy?</h2>
             <img src={Ornament} className="ornament-who-help" alt="" />
             <Foundation />
             <DescFoundation />

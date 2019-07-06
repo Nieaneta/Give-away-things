@@ -19,8 +19,8 @@
     position: relative;
     background-image: url("../images/form-bg.jpg");
     background-size: cover;
-    height: 60vh;
-    min-height: 600px;
+    height: 70vh;
+    min-height: 650px;
     background-repeat: no-repeat;
     background-position: center;
 }

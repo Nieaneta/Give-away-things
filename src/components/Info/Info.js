@@ -23,6 +23,9 @@ class GiveBags extends Component {
     };
     
 componentDidMount(){
+this.setState({
+    numberBag: this.state.numberBag + 1
+})
 
 }
     render() {

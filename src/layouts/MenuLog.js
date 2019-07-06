@@ -2,16 +2,13 @@ import React, { Component } from "react";
 
 import { DropdownMenu, MenuItem } from "react-bootstrap-dropdown-menu";
 
-class Form1 extends Component {
+class MenuLog extends Component {
     render() {
         return (
             <>
                 <Nav />
                 <SettingsMenu />
-                <HeaderForm1/>
-                <MainForm1/>
-                <Form/>
-                <Footer/>
+                <FormGive/>
             </>
         );
     }
@@ -44,4 +41,4 @@ class SettingsMenu extends Component {
     }
 }
 
-export default Form1;
+export default MenuLog;

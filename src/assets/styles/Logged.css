@@ -1,0 +1,65 @@
+.formLog{
+    text-align: center;
+    margin: 50px auto;
+    height: 500px;
+    width: 400px;
+    
+}
+.formSignIn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.formLogTitle{
+    font-size: 2rem;
+}
+.imgOrnam{
+    height: 40px;
+  
+}
+
+.emailLog, .passwordLog{
+    display: flex;
+    margin: 0 auto;
+    border-style: none;
+    border-bottom: 1px solid black;
+    font-size: 100%;
+    width: 400px;
+    padding: 0;
+  
+}
+
+.emailTxt, .passwordTxt{
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 10px;
+   
+}
+.remindPass{
+    font-size: 0.8rem;
+    text-align: right;
+    margin: 0;
+}
+
+.buttonLogg{
+    display: flex;
+    justify-content: space-between;
+}
+
+.signInLog,.createAccountLog{
+border-style: none;
+background-color: #fff;
+/* text-decoration: none;
+color: #000; */
+padding: 20px;
+font-size: 1.1rem;
+margin-top: 30px;
+}
+.createAccountLog{
+    font-size: 0.9rem;
+}
+
+.welcome{
+    font-size: 1.2rem;
+}

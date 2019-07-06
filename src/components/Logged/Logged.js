@@ -1,92 +1,130 @@
-import React, { Component } from 'react';
-import Nav from '../../components/Nav/Nav';
-import {Link} from 'react-router-dom';
-import Ornament from '../../components/Ornament';
+import React, { Component } from "react";
+import Nav from "../Nav";
+import { Link, NavLink } from "react-router-dom";
+import Ornament from "../../assets/images/ornament.png";
+import Logg from "../../assets/styles/Logged.css";
+import API from "../../components/API/Api";
+import FormGive from "../FormGive";
 
-class Logged extends Component{
-    state={
+const isClicked = false;
+class Logged extends Component {
+    state = {
         email: "",
         password: "",
         repeatPassword: "",
         isLogged: false,
-        users: null
-    }
+        users: [],
+        isClicked: false
+    };
 
-    onInputChange = (e) =>{
+    onInputChange = e => {
         this.setState({
             [e.target.name]: e.target.value
-        })
-    }
+        });
+    };
 
-    onFormSubmit = (e) => {
+    onFormSubmit = e => {
         e.preventDefault();
-        const {login, password} = this.state;
-        const {logged} = this.props
+        const { email, password } = this.state;
+        const { logged } = this.props;
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+    };
+
+    componentDidMount() {
+        // let API = "http://localhost:3000/users";
+        fetch(API)
+            .then(resp => resp.json())
+            .then(users => {
+                users.map(
+                    users((user, id) => {
+                        return (
+                            <div key={id}>
+                                <h3>{user.name}</h3>
+                                <p>{user.email}</p>
+                                <p>{user.password}</p>
+                            </div>
+                        );
+                        // const isLoginValid = user.email === email;
+                        // const isPasswordValid = user.password === password;
+
+                        // if (isLoginValid && isPasswordValid) {
+                        //     logged(user);
+                        //     this.setState({ isLogged: true, user });
+                        // } else {
+                        //     this.setState({
+                        //         errorMessage: "Zly login lub haslo"
+                        //     });
+                        // }
+                    })
+                );
+            });
     }
-    // fetch(users)
-    //         .then(data => data.json())
-    //         .then(users => {
-
-    //             users.forEach(user => {
-    //                 const isLoginValid = user.login === login;
-    //                 const isPasswordValid = user.password === password;
-
-    //                 if(isLoginValid && isPasswordValid){
-    //                     logged(user);
-    //                     this.setState({isLogged: true, user})
-    //                 } else{
-    //                     this.setState({errorMessage: "Zly login lub haslo"})
-    //                 }
-    //             })
-    //         })
-    //         .catch(err => alert(err))
-    // }
-
-
     render() {
-        const {email, password, repeatPassword, isLogged,user} = this.state;
-        // if(!isLogged){
-        return(
-            <>
-                <h2>Zaloguj się</h2>
-                <Ornament/>
-                <form className="formSignIn" onSubmit={this.onFormSubmit}>
+        const { email, password, repeatPassword, isLogged, users } = this.state;
+        if (!isLogged) {
+            return (
+                <>
+                    <div className="formLog">
+                        {this.state.users}
+                        <h2 className="formLogTitle">Zaloguj się</h2>
+                        <img src={Ornament} alt="" className="imgOrnam" />
 
+                        <form
+                            className="formSignIn"
+                            onSubmit={this.onFormSubmit}
+                        >
+                            <input
+                                type="email"
+                                id="email"
+                                className="emailLog"
+                                value={email}
+                                name="email"
+                                placeholder="Email"
+                                onChange={this.onInputChange}
+                            />
 
-                    <input
-                        type="email"
-                        id="email"
-                        className="emailLog"
-                        value={email}
-                        name="email"
-                        onChange={this.onInputChange} />
-                    <label>Email</label>
+                            <input
+                                type="password"
+                                id="password"
+                                className="passwordLog"
+                                name="password"
+                                placeholder="Hasło"
+                                onChange={this.onInputChange}
+                            />
 
+                            <p className="remindPass">Przypomnij hasło</p>
+                            <div className="buttonLogg">
+                                <button
+                                    className="createAccountLog"
+                                    type="submit"
+                                >
+                                    <NavLink to="/create-account">
+                                        Załóż konto
+                                    </NavLink>
+                                </button>
 
-                    <input
-                        type="password"
-                        id="password"
-                        className="passwordLog"
-                        name="password"
-                        onChange={this.onInputChange} />
-                    <label>Hasło</label>
+                                <button className="signInLog" type="submit">
+                                    <NavLink to="/form-give">
+                                        Zaloguj się
+                                    </NavLink>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </>
+            );
 
-                    <p className="remindPass">Przypomnij hasło</p>
-                    <button className="signIn" type="submit">Zaloguj się</button>
-                </form>
-                <p className="createAccount"><Link to="/newUser">Założ konto</Link></p>
-            </>
-        )
-
-
-        //     }  else if(isLogged){
-        //         return(
-        //             <>
-        //             <Nav/>
-        //             <h4 className="welcome">Witaj, {user.login}</h4>
-        //             </>
-        //         )
-        // }
-    }}
-
-export default Logged
+            // if (isLogged) {
+            //     return (
+            //         <>
+            //             <Nav />
+            //             <h4 className="welcome">Witaj, {user.login}</h4>
+            //             <FormGive/>
+            //         </>
+            //     );
+            // }
+        }
+    }
+}
+export default Logged;

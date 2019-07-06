@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Prompt } from "react-router-dom";
 
+import Footer from "../Footer";
 import Ornament from "../../assets/images/ornament.png";
-import "../../assets/styles/Form.css";
+import "../../assets/styles/ContactForm.css";
 
 class Form extends Component {
     state = {
@@ -42,7 +43,10 @@ class Form extends Component {
         });
         if (isNameValid && isEmailValid && isMessageValid) {
             this.setState({
-                isFormValid: true
+                isFormValid: true,
+                name: "",
+                email: "",
+                message: ""
             });
         } else {
             this.setState({
@@ -63,8 +67,11 @@ class Form extends Component {
         } = this.state;
         return (
             <>
-                {isFormValid && "Dziękujemy za wiadomość! :)"}
-                <form onSubmit={this.onFormSubmit} className="form-img">
+                <form
+                    onSubmit={this.onFormSubmit}
+                    className="form-img"
+                    id="contact"
+                >
                     <div className="bg-form">
                         <h3 className="form-title">Skontaktuj się z nami</h3>
                         <img src={Ornament} className="form-ornament" alt="" />
@@ -112,25 +119,26 @@ class Form extends Component {
                             Wyślij
                         </button>
                         <div>
-                        <div>
-                            {!isNameValid &&
-                                "Pole imię musi zawierać co najmniej 2 znaki"}
+                            <div>
+                                {!isNameValid &&
+                                    "Pole imię musi zawierać co najmniej 2 znaki"}
+                            </div>
+                            <div>
+                                {!isEmailValid &&
+                                    "Pole email musi zawierać znak @ i co najmniej 3 znaki"}
+                            </div>
+                            <div>
+                                {!isMessageValid &&
+                                    "Pole wiadomość musi zostać uzupełnione"}
+                            </div>
                         </div>
-                        <div>
-                            {!isEmailValid &&
-                                "Pole email musi zawierać znak @ i co najmniej 3 znaki"}
-                        </div>
-                        <div>
-                            {!isMessageValid &&
-                                "Pole wiadomość musi zostać uzupełnione"}
-                        </div>
-                    </div>
-                 
+                        {isFormValid && "Dziękujemy za wiadomość! :)"}
                     </div>
                     <Prompt
                         when={this.state.message}
                         message="Masz niewypełniony formularz. Czy chcesz opuścić tę stronę?"
                     />
+                    <Footer />
                 </form>
             </>
         );

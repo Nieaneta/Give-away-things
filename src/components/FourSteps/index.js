@@ -1,4 +1,3 @@
-import FourSteps from './FourSteps';
+import FourSteps from "./FourSteps";
 
 export default FourSteps;
-

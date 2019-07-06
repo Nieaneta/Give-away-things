@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 import Button from "../Button";
+// import CreateAccount from "../CreateAccount/CreateAccount";
 import Icon1 from "../../assets/images/select.jpg";
 import Icon2 from "../../assets/images/pack.png";
 import Icon3 from "../../assets/images/whoHelps.png";
@@ -22,7 +24,10 @@ class FourSteps extends Component {
                             <OrderCourier />
                         </div>
                     </div>
-                    <Button />
+                    <NavLink to="/create-account">
+                        <Button />
+                    </NavLink>
+                     
                 </section>
             </>
         );
