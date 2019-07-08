@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Prompt } from "react-router-dom";
-
 import Footer from "../Footer";
 import Ornament from "../../assets/images/ornament.png";
 import "../../assets/styles/ContactForm.css";
@@ -134,10 +132,7 @@ class Form extends Component {
                         </div>
                         {isFormValid && "Dziękujemy za wiadomość! :)"}
                     </div>
-                    <Prompt
-                        when={this.state.message}
-                        message="Masz niewypełniony formularz. Czy chcesz opuścić tę stronę?"
-                    />
+                  
                     <Footer />
                 </form>
             </>

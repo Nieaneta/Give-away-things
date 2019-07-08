@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../Nav";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Ornament from "../../assets/images/ornament.png";
 import Logg from "../../assets/styles/Logged.css";
 import API from "../../components/API/Api";

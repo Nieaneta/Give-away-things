@@ -6,7 +6,8 @@ import Logged from "../components/Logged";
 import CreateAccount from "../components/CreateAccount";
 import LandingPage from "./LandingPage";
 import FormGive from "../components/FormGive";
-
+import Form2 from "../components/Form2";
+import Form3a from "../components/Form3a";
 class App extends Component {
     render() {
         return (
@@ -22,6 +23,9 @@ class App extends Component {
                                 component={CreateAccount}
                             />
                             <Route path="/form-give" component={FormGive} />
+                            <Route path="/form2" component={Form2} />
+                            <Route path="/form3a" component={Form3a} />
+
                         </Switch>
                     </div>
                 </>

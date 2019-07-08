@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Nav from "../../components/Nav/Nav";
+import Nav from "../../components/Nav";
 import { NavLink } from "react-router-dom";
 import Ornament from "../../assets/images/ornament.png";
 import CreateAcc from "../../assets/styles/Account.css";
@@ -21,8 +21,8 @@ class Account extends Component {
 
     onFormSubmit = e => {
         e.preventDefault();
-        const { email, password } = this.state;
-        const { logged } = this.props;
+        // const { email, password } = this.state;
+        // const { logged } = this.props;
     };
 
     render() {
@@ -33,7 +33,6 @@ class Account extends Component {
                     <div className="formLog">
                         <h2 className="formLogTitle">Załóż konto</h2>
                         <img src={Ornament} alt="" className="imgOrnam" />
-                        {/* <Ornament /> */}
                         <form
                             className="formSignIn"
                             onSubmit={this.onFormSubmit}
@@ -79,14 +78,14 @@ class Account extends Component {
                 </>
             );
 
-            if (isLogged) {
-                return (
-                    <>
-                        <Nav />
-                        <h4 className="welcome">Witaj, {user.login}</h4>
-                    </>
-                );
-            }
+            // if (isLogged) {
+            //     return (
+            //         <>
+            //             <Nav />
+            //             <h4 className="welcome">Witaj, {user.login}</h4>
+            //         </>
+            //     );
+            // }
         }
     }
 }

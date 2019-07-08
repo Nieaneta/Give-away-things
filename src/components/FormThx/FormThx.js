@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import Header from "../Form1/HeaderForm1";
-import Ornament "../../assets/images/ornament.png";
+import Ornament from "../../assets/images/ornament.png";
 import Form from "../Form/Form";
 import Footer from "../Footer/Footer";
 

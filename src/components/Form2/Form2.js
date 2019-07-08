@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import Header from "../Form1/HeaderForm1";
-import Form from "../Form/Form";
-import Footer from "../Footer/Footer";
+// import FormGive from "../FormGive";
+import ContactForm from "../ContactForm";
 
-class MainForm2 extends Component {
+class Form2 extends Component {
     render() {
         return (
             <>
-            <Header/>
                 <h3>Ważne!</h3>
                 <p>
                     Wszystkie rzeczy do oddania zapakuj w 60l
@@ -33,18 +31,17 @@ class MainForm2 extends Component {
                         <option value="1">4</option>
                         <option value="1">5</option>
                     </select>
-                    <Link to="/goForm2">
+                    <Link to="/form-give">
                         <button>Wstecz</button>
                     </Link>
-                    <Link to="/goForm2">
+                    <Link to="/form3a">
                         <button>Dalej</button>
                     </Link>
                 </form>
-                <Form />
-                <Footer />
+                <ContactForm/>
             </>
         );
     }
 }
 
-export default MainForm2;
+export default Form2;

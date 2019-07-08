@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import Footer from "../Footer/Footer";
 import ContactForm from "../ContactForm";
+// import Form2 from "../Form2";
 
 class Form1 extends Component {
     state = {
@@ -20,25 +20,26 @@ class Form1 extends Component {
 
     onFormSubmit = e => {
         e.preventDefault();
-        this.props.onSubmit(this.state)
+        this.props.onSubmit(this.state);
     };
-
-    
 
     render() {
         console.log(this.state);
         return (
             <>
-                <h3>Ważne!</h3>
-                <p>
-                    Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu
-                    będziemy wiedzieć komu najlepiej je przekazać.
-                </p>
-
-                <form onSubmit={this.onFormSubmit}>
+            <div className="img-bear">
+                <div className="important">
+                    <h3>Ważne!</h3>
+                    <p>
+                        Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu
+                        będziemy wiedzieć komu najlepiej je przekazać.
+                    </p>
+                </div>
+                <form className="form-checked" onSubmit={this.onFormSubmit}>
                     <span>Krok 1/4</span>
                     <h4>Zaznacz co chcesz oddać:</h4>
-                    <input
+
+                    <input className="checkbox"
                         type="checkbox"
                         onChange={this.onInputChange("secondHand")}
                     />
@@ -67,14 +68,15 @@ class Form1 extends Component {
                         onChange={this.onInputChange("another")}
                     />
                     <label>inne</label>
-                    <NavLink to="/goForm2">
-                        <button>Dalej</button>
+                    <NavLink to="/form2">
+                        <button className="form-btn-go">Dalej</button>
                     </NavLink>
                 </form>
+                </div>
                 <ContactForm />
             </>
         );
     }
 }
 
-export default Form1
+export default Form1;
